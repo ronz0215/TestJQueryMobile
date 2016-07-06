@@ -1,1 +1,76 @@
-"My Page" 
+<!doctype html>
+<html>
+<head>
+    <title>My Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Load my custom sytle sheet but make sure the default style sheet, below,
+is ...mobile.STRUCTURE-... the structure makes the order of the css
+independant, meaning customs can be load before the defualt. -->
+    <link rel="stylesheet" href="themes/Golf1.min.css" />     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+
+<!-- Firebase code -->
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDP1o1VmueFCXa6OUovl3qSYsSuhEQ_W34",
+    authDomain: "jquery-mobile-test-d60cb.firebaseapp.com",
+    databaseURL: "https://jquery-mobile-test-d60cb.firebaseio.com",
+    storageBucket: "jquery-mobile-test-d60cb.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+
+        <div data-role="header">
+            <h1>JQuery Mobile Demo</h1>
+        </div><!-- /header-->
+        <div role="main" class="ui-content">
+            <div id = "block" <p>Hello world</p> </div>
+            <ul data-role="listview" data-inset="true" data-filter="true" data-theme="b">
+                <li><a href="#">Acura</a></li>
+                <li><a href="#">Audi</a></li>
+                <li><a href="#">BMW</a></li>
+                <li><a href="#">Cadillac</a></li>
+                <li><a href="#">Ferrari</a></li>
+            </ul>
+            <form>
+                <label for="slider-0">Input slider:</label>
+                <input type="range" name="slider" id="slider-0" value="25" min="0" max="100" />
+                <a href="#" data-role="button" data-icon="star" id="button">Hide Title</a>
+            </form>
+        </div><!-- /content-->
+        <div data-role="footer">
+            <h4>My Footer</h4>
+        </div><!-- /footer-->
+    </div> --><!-- /page-->
+
+<script>
+// Using multiple unit types within one animation.
+$( "#button" ).click(function() {
+    $("#block").hide(2000);
+  // $( "#block" ).animate({
+  //   width: "70%",
+  //   opacity: 0.4,
+  //   marginLeft: "0.6in",
+  //   fontSize: "3em",
+  //   borderWidth: "10px"
+  // }, 1500 );
+});
+</script>
+
+
+
+
+</body>
+</html>
